@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutare Cercetasi - Cetatea Rosie Sibiu</title>
+    
+    <!-- Legam fisierul CSS pentru design -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Antetul paginii (Header) -->
+    <header>
+        <div class="container">
+            <h1>Centrul Local "Cetatea Rosie" Sibiu</h1>
+            <p>Fii Gata! Alatura-te aventurii cercetasesti.</p>
+        </div>
+    </header>
+
+    <!-- Sectiunea despre noi -->
+    <section id="despre" class="container">
+        <h2>Ce inseamna sa fii cercetas?</h2>
+        <div class="beneficii">
+            <div class="beneficiu">
+                <h3>Natura</h3>
+                <p>Exploram muntii, invatam sa supravietuim si sa protejam mediul inconjurator.</p>
+            </div>
+            <div class="beneficiu">
+                <h3>Prietenie</h3>
+                <p>Cream legaturi pe viata si lucram in echipa in campuri si activitati saptamanale.</p>
+            </div>
+            <div class="beneficiu">
+                <h3>Dezvoltare</h3>
+                <p>Invatam prin actiune si ne dezvoltam abilitati practice pentru viata reala.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectiunea cu formularul de recrutare -->
+    <section id="recrutare" class="container">
+        <h2>Vrei sa fii cercetas? Inscrie-te!</h2>
+        
+        <!-- Formularul caruia ii vom atasa API-ul mai tarziu -->
+        <form id="formular-recrutare">
+            <div class="grup-input">
+                <label for="nume">Nume si Prenume:</label>
+                <input type="text" id="nume" name="nume" required>
+            </div>
+
+            <div class="grup-input">
+                <label for="email">Adresa de Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="grup-input">
+                <label for="varsta">Varsta:</label>
+                <input type="number" id="varsta" name="varsta" min="7" max="99" required>
+            </div>
+
+            <div class="grup-input">
+                <label for="mesaj">De ce vrei sa intri in cercetasie?</label>
+                <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" id="buton-trimite">Trimite Inscrierea</button>
+        </form>
+        
+        <!-- Aici va aparea mesajul de succes dupa trimitere -->
+        <p id="mesaj-status"></p>
+    </section>
+
+    <!-- Subsolul paginii (Footer) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Centrul Local "Cetatea Rosie" Sibiu. Gata Oricand!</p>
+            
+            <!-- Am adaugat zona de link-uri aici -->
+            <div class="retele-sociale">
+                <a href="https://www.instagram.com/sibiu.scouts" target="_blank">Instagram: sibiu.scouts</a> |
+                <a href="https://www.facebook.com/sibiu.scout" target="_blank">Facebook: Cercetasii Romaniei - Cetatea Rosie Sibiu</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legam fisierul JavaScript la final, inainte de inchiderea body-ului -->
+    <script src="script.js"></script>
+</body>
+</html>

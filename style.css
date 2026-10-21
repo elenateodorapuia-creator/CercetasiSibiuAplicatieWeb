@@ -1,0 +1,189 @@
+/* Importam un font rotund si prietenos din Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* 1. Resetare si setari generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    color: #444;
+    background-color: #f7f9f8; /* Un fundal foarte usor nuantat */
+}
+
+.container {
+    max-width: 900px; /* Am facut continutul putin mai compact pentru eleganta */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Antetul (Header) - Mai mic si cu colturi rotunjite */
+header {
+    background: linear-gradient(135deg, #9e1422, #7a0000); /* Un gradient rosu mai placut */
+    color: white;
+    text-align: center;
+    padding: 40px 20px; /* Am redus inaltimea (era 60px) */
+    border-radius: 0 0 25px 25px; /* Colturi rotunjite in partea de jos */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #34a064; /* Verde cercetasesc deschis */
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 3. Sectiunile principale - Mult mai aerisite */
+section {
+    background-color: white;
+    padding: 50px 40px; /* Mai mult spatiu in interior (aer) */
+    margin-top: 50px; /* Mai mult spatiu intre sectiuni ca sa nu se inghesuie titlurile */
+    border-radius: 15px; /* Colturi rotunjite prietenoase */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Umbra foarte difuza */
+}
+
+h2 {
+    text-align: center;
+    color: #8B0000;
+    font-size: 1.8rem;
+    margin-bottom: 40px; /* Spatiu mare sub titlu, inainte de continut */
+    margin-top: 40px;
+}
+
+/* 4. Sectiunea "Ce facem" - Casute interactive */
+.beneficii {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.beneficiu {
+    flex: 1;
+    min-width: 230px;
+    background-color: #fcfcfc;
+    padding: 30px 20px;
+    border: 1px solid #eee;
+    border-top: 5px solid #34a064; /* Banda verde in partea de sus a casutei */
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Pregatim animatia */
+}
+
+/* Animatie cand pui mouse-ul pe casuta */
+.beneficiu:hover {
+    transform: translateY(-8px); /* Se ridica usor */
+    box-shadow: 0 8px 20px rgba(52, 160, 100, 0.15); /* Umbra verde subtila */
+}
+
+.beneficiu h3 {
+    color: #34a064;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* 5. Formularul de recrutare - Modern si curat */
+form {
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spatiu generos intre elementele formularului */
+}
+
+.grup-input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+input, textarea {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #34a064;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(52, 160, 100, 0.1); /* Efect de "glow" (stralucire) verde */
+}
+
+button {
+    background-color: #34a064;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px; /* Buton in forma de pastila, foarte friendly */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(52, 160, 100, 0.3);
+}
+
+button:hover {
+    background-color: #27804f;
+    transform: translateY(-2px); /* Se ridica la hover */
+    box-shadow: 0 6px 20px rgba(52, 160, 100, 0.4);
+}
+
+#mesaj-status {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #34a064;
+}
+
+/* 6. Subsolul (Footer) */
+footer {    
+    background-color: #2b2b2b;
+    color: #ddd;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    border-radius: 25px 25px 0 0; /* Rotunjit sus, pentru a se potrivi cu headerul */
+}
+
+.retele-sociale {
+    margin-top: 20px;
+}
+
+.retele-sociale a {
+    display: inline-block;
+    color: white;
+    background-color: #34a064;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.retele-sociale a:hover {
+    background-color: #8B0000; /* Devine rosu la hover */
+}
