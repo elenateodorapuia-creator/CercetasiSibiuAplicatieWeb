@@ -17,8 +17,8 @@ body {
 
 .container {
     max-width: 900px; /* Am facut continutul putin mai compact pentru eleganta */
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 20px auto;
+    padding: 10px 20px;
 }
 
 /* 2. Antetul (Header) - Mai mic si cu colturi rotunjite */
@@ -26,7 +26,7 @@ header {
     background: linear-gradient(135deg, #9e1422, #7a0000); /* Un gradient rosu mai placut */
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Am redus inaltimea (era 60px) */
+    padding: 15px 20px; 
     border-radius: 0 0 25px 25px; /* Colturi rotunjite in partea de jos */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-bottom: 5px solid #34a064; /* Verde cercetasesc deschis */
@@ -57,7 +57,7 @@ h2 {
     color: #8B0000;
     font-size: 1.8rem;
     margin-bottom: 30px; /* Spatiu mare sub titlu, inainte de continut */
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 /* 4. Sectiunea "Ce facem" - Casute interactive */
@@ -186,4 +186,36 @@ footer {
 
 .retele-sociale a:hover {
     background-color: #8B0000; /* Devine rosu la hover */
+}
+
+/* Decupare inteligenta pentru imaginile din carusel */
+.carusel-img {
+  width: 100%;
+  height: 480px;           /* Inaltime fixa pentru cadru (ajusteaza la 400px - 550px dupa preferinta) */
+  object-fit: cover;       /* Decupeaza marginile automat pentru a umple cadrul fara deformare */
+  object-position: center; /* Pastreaza centrul imaginii vizibil */
+}
+
+
+/* --- CARUSEL PE ECRANE MARI (LAPTOP / DESKTOP) --- */
+#carouselExampleControls {
+  max-width: 1100px;           /* Limiteaza latimea ca sa nu mai atinga marginile ecranului */
+  margin: 35px auto;           /* 35px spatiu sus/jos si 'auto' pentru centrare perfecta pe mijloc */
+  border-radius: 16px;         /* Colturi rotunjite elegante, specifice designului modern */
+  overflow: hidden;            /* Obligatoriu: forteaza pozele sa respecte colturile rotunjite */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* Umbra fina pentru profunzime pe fundal */
+}
+
+/* --- CARUSEL PE TELEFON (SUB 768px) --- */
+@media (max-width: 768px) {
+  #carouselExampleControls {
+    max-width: 100%;           /* Se intinde complet din stanga pana in dreapta */
+    margin: 0;                 /* Elimina spatiile laterale pe mobil */
+    border-radius: 0;          /* Colturile devin drepte la marginile ecranului */
+    box-shadow: none;          /* Scoate umbra pe telefon */
+  }
+
+  .carusel-img {
+    height: 260px;             /* Inaltime adaptata pentru ecrane mici */
+  }
 }
